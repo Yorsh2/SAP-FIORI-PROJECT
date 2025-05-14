@@ -1,0 +1,63 @@
+<mvc:View
+  controllerName="com.ccnay.jagsapinv.sapfiori.controller.users.pages.ManagementUsers"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true"
+>
+  <VBox id="ManagementUsers_VBox" class="sapUiContentPadding">
+    
+    <!-- Toolbar con botones CRUD -->
+    <Toolbar id="ManagementUsers_tbrCrud">
+      <ToolbarSpacer id="ManagementUsers_tbrSpacer" />
+      <Button id="ManagementUsers_btnCreate" text="Crear" type="Accept" icon="sap-icon://add" press="onCreatePress"/>
+      <Button id="ManagementUsers_btnEdit" text="Editar" type="Emphasized" icon="sap-icon://edit" press="onEditPress"/>
+      <Button id="ManagementUsers_btnUpdate" text="Actualizar" type="Default" icon="sap-icon://refresh" press="onUpdatePress"/>
+      <Button id="ManagementUsers_btnDelete" text="Eliminar" type="Reject" icon="sap-icon://delete" press="onDeletePress"/>
+    </Toolbar>
+
+    <!-- Tabla de usuarios -->
+    <Table
+      id="ManagementUsers_tblUsers"
+      inset="false"
+      items="{ path: '/Users' }"
+      mode="SingleSelectMaster"
+    >
+
+      <columns>
+        <Column id="ManagementUsers_colId"><Text id="ManagementUsers_txtColId" text="ID" /></Column>
+        <Column id="ManagementUsers_colNombre"><Text id="ManagementUsers_txtColNombre" text="Nombre" /></Column>
+        <Column id="ManagementUsers_colApellido"><Text id="ManagementUsers_txtColApellido" text="Apellido" /></Column>
+        <Column id="ManagementUsers_colEmail"><Text id="ManagementUsers_txtColEmail" text="Email" /></Column>
+        <Column id="ManagementUsers_colDepto"><Text id="ManagementUsers_txtColDepto" text="Departamento" /></Column>
+        <Column id="ManagementUsers_colCargo"><Text id="ManagementUsers_txtColCargo" text="Cargo" /></Column>
+        <Column id="ManagementUsers_colFecha"><Text id="ManagementUsers_txtColFecha" text="Fecha de Ingreso" /></Column>
+        <Column id="ManagementUsers_colEstado"><Text id="ManagementUsers_txtColEstado" text="Estado" /></Column>
+      </columns>
+
+      <items>
+        <ColumnListItem id="ManagementUsers_tplUserRow">
+          <cells>
+            <Text id="ManagementUsers_txtId" text="{id}" />
+            <Text id="ManagementUsers_txtNombre" text="{nombre}" />
+            <Text id="ManagementUsers_txtApellido" text="{apellido}" />
+            <Text id="ManagementUsers_txtEmail" text="{email}" />
+            <Text id="ManagementUsers_txtDepto" text="{departamento}" />
+            <Text id="ManagementUsers_txtCargo" text="{cargo}" />
+            <Text id="ManagementUsers_txtFecha" text="{fechaIngreso}" />
+            <Text id="ManagementUsers_txtEstado" text="{estado}" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+
+    <!-- Footer con paginación -->
+    <Toolbar id="ManagementUsers_tbrFooter" design="Auto" class="sapUiTinyMarginTop">
+      <Text id="ManagementUsers_txtPagination" text="Mostrando 1-n de n registros" />
+      <ToolbarSpacer id="ManagementUsers_footerSpacer" />
+      <Button id="ManagementUsers_btnPrevPage" icon="sap-icon://nav-back" press="onPreviousPage" />
+      <Text id="ManagementUsers_txtPageInfo" text="Página 1 de n" />
+      <Button id="ManagementUsers_btnNextPage" icon="sap-icon://nav-forward" press="onNextPage" />
+    </Toolbar>
+  </VBox>
+</mvc:View>

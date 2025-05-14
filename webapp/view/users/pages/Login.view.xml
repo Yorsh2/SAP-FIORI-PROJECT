@@ -1,0 +1,78 @@
+<mvc:View
+    controllerName="com.ccnay.jagsapinv.sapfiori.controller.users.pages.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+    displayBlock="true"
+    height="100%"
+>
+        <m:HBox
+            id="loginHBox"
+            width="100%"
+            height="100%"
+            justifyContent="Start"
+            alignItems="Stretch"
+        >
+            <!-- Main Content -->
+            <m:VBox
+                id="mainVBox"
+                width="100%"
+                justifyContent="Start"
+                alignItems="Stretch"
+            >
+                <!-- Login Panel -->
+                <m:VBox
+                    id="contentVBox"
+                    alignItems="Center"
+                    justifyContent="Center"
+                    class="sapUiMediumMarginTop"
+                >
+                    <m:Panel
+                        id="loginPanel"
+                        width="350px"
+                        headerText="Iniciar Sesión"
+                    >
+                        <m:VBox
+                            id="formVBox"
+                            alignItems="Center"
+                        >
+                            <m:Image
+                                id="loginLogo"
+                                src="./resources/images/logo_sap.png"
+                                width="120px"
+                                class="sapUiSmallMarginBottom"
+                            />
+
+                            <m:Text
+                                id="credentialsLabel"
+                                text="Introduce tu usuario y contraseña"
+                                class="sapUiSmallMarginBottom sapUiTinyMarginTop"
+                            />
+
+                            <m:Input
+                                id="usernameInput"
+                                placeholder="Usuario"
+                                width="100%"
+                                class="sapUiSmallMarginBottom"
+                            />
+
+                            <m:Input
+                                id="passwordInput"
+                                placeholder="Contraseña"
+                                type="Password"
+                                width="100%"
+                                class="sapUiSmallMarginBottom"
+                            />
+
+                            <m:Button
+                                id="loginButton"
+                                text="Iniciar Sesión"
+                                type="Emphasized"
+                                width="100%"
+                                press="onLoginPress"
+                            />
+                        </m:VBox>
+                    </m:Panel>
+                </m:VBox>
+            </m:VBox>
+        </m:HBox>
+</mvc:View>

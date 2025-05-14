@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="com.ccnay.jagsapinv.sapfiori.controller.Users"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+>
+    <tnt:ToolPage
+        id="IdToolPage1Users"
+        visible="true"
+    >
+        <tnt:header>
+            <f:ShellBar
+                id="IdShellBar1Users"
+                title="Gestión de Usuarios"
+                homeIcon="./resources/images/logo_sap.png"
+                showMenuButton="true"
+                menuButtonPressed="onMenuButtonPress"
+            >
+                <!-- <f:profile>
+                    <m:Avatar
+                        id="IdAvatar1Users"
+                        initials="UI"
+                        press="onAvatarPress"
+                    />
+                </f:profile> -->
+            </f:ShellBar>
+        </tnt:header>
+
+        <tnt:sideContent>
+            <core:Fragment
+                fragmentName="com.ccnay.jagsapinv.sapfiori.view.users.components.SideNavigation"
+                type="XML"
+            />
+        </tnt:sideContent>
+
+        <tnt:mainContents>
+            <m:NavContainer id="IdNavContainer1Users">
+                <!-- No incluyas páginas aquí, se cargarán dinámicamente -->
+            </m:NavContainer>
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>
