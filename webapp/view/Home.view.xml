@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="com.ccnay.jagsapinv.sapfiori.controller.Users"
+    controllerName="com.ccnay.jagsapinv.sapfiori.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:m="sap.m"
     xmlns:tnt="sap.tnt"
@@ -18,13 +18,6 @@
                 showMenuButton="true"
                 menuButtonPressed="onMenuButtonPress"
             >
-                <!-- <f:profile>
-                    <m:Avatar
-                        id="IdAvatar1Users"
-                        initials="UI"
-                        press="onAvatarPress"
-                    />
-                </f:profile> -->
             </f:ShellBar>
         </tnt:header>
 

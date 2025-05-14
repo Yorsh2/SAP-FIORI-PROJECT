@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel, MessageBox, XMLView) {
   "use strict";
 
-  return BaseController.extend("com.ccnay.jagsapinv.sapfiori.controller.Users", {
+  return BaseController.extend("com.ccnay.jagsapinv.sapfiori.controller.Home", {
     onInit: function () {
       var oModel = new JSONModel();
       oModel.loadData("./resources/jsons/usersNavItems.json", null, false); // Carga síncrona (más simple para este caso)
@@ -61,6 +61,9 @@ sap.ui.define([
               break;
             case "userManagement":
               sViewName = "com.ccnay.jagsapinv.sapfiori.view.users.pages.ManagementUsers";
+              break;
+            case "values":
+              sViewName = "com.ccnay.jagsapinv.sapfiori.view.values.pages.ManagementValues";
               break;
             case "roleManagement":
               MessageBox.information("Funcionalidad de gestión de roles en desarrollo");

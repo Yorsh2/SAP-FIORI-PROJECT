@@ -82,8 +82,7 @@
                 "type": "View",
                 "viewType": "XML",
                 "path": "com.ccnay.jagsapinv.sapfiori.view",
-                "async": true,
-                "viewPath": "com.ccnay.jagsapinv.sapfiori.view"
+                "async": true
             },
             "routes": [
                 {
@@ -128,20 +127,13 @@
                 },
                 "TargetUsers": {
                     "viewId": "Users",
-                    "viewName": "Users",
+                    "viewName": "Home",
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
                     "viewlevel": 3,
-                    "path": "com.ccnay.jagsapinv.sapfiori.view.users",
-                    "viewPath": "com.ccnay.jagsapinv.sapfiori.view.users"
-                },
-                "TargetHome": {
-                    "viewId": "Home",
-                    "viewName": "Home",
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "viewLevel": 1
+                    "path": "com.ccnay.jagsapinv.sapfiori.view",
+                    "viewPath": "com.ccnay.jagsapinv.sapfiori.view"
                 }
             }
         },

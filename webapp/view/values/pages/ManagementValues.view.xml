@@ -1,0 +1,114 @@
+<mvc:View
+    controllerName="com.ccnay.jagsapinv.sapfiori.controller.values.pages.ManagementValues"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+>
+    <VBox id="ManagementValues_VBox" class="sapUiContentPadding">
+
+        <!-- Toolbar con botones CRUD -->
+        <Toolbar id="ManagementValues_tbrCrud">
+            <ToolbarSpacer id="ManagementValues_tbrSpacer" />
+            <Button id="ManagementValues_btnCreate" text="Crear" type="Accept" icon="sap-icon://add" press="onCreatePress"/>
+            <Button id="ManagementValues_btnEdit" text="Editar" type="Emphasized" icon="sap-icon://edit" press="onEditPress"/>
+            <Button id="ManagementValues_btnUpdate" text="Actualizar" type="Default" icon="sap-icon://refresh" press="onUpdatePress"/>
+            <Button id="ManagementValues_btnDelete" text="Eliminar" type="Reject" icon="sap-icon://delete" press="onDeletePress"/>
+        </Toolbar>
+
+        <!-- Tabla de Values -->
+        <Table
+            id="ManagementValues_tblValues"
+            inset="false"
+            items="{ path: '/Values' }"
+            mode="SingleSelectMaster"
+            selectionChange="onTableSelectionChange"
+        >
+            <columns>
+                <Column id="ManagementValues_colLabelId">
+                    <Text id="ManagementValues_txtColLabelId" text="Label ID" />
+                </Column>
+                <Column id="ManagementValues_colValueId">
+                    <Text id="ManagementValues_txtColValueId" text="Value ID" />
+                </Column>
+                <Column id="ManagementValues_colValue">
+                    <Text id="ManagementValues_txtColValue" text="Valor" />
+                </Column>
+                <Column id="ManagementValues_colAlias">
+                    <Text id="ManagementValues_txtColAlias" text="Alias" />
+                </Column>
+                <Column id="ManagementValues_colSequence">
+                    <Text id="ManagementValues_txtColSequence" text="Secuencia" />
+                </Column>
+                <Column id="ManagementValues_colImage">
+                    <Text id="ManagementValues_txtColImage" text="Imagen" />
+                </Column>
+                <Column id="ManagementValues_colDescription">
+                    <Text id="ManagementValues_txtColDescription" text="Descripción" />
+                </Column>
+                <Column id="ManagementValues_colRegDate">
+                    <Text id="ManagementValues_txtColRegDate" text="Fecha Registro" />
+                </Column>
+                <Column id="ManagementValues_colRegUser">
+                    <Text id="ManagementValues_txtColRegUser" text="Usuario Registro" />
+                </Column>
+            </columns>
+
+
+            <items>
+    <ColumnListItem id="ManagementValues_tplValueRow">
+        <cells>
+            <Text
+                id="ManagementValues_txtLabelId"
+                text="{LABELID}"
+            />
+            <Text
+                id="ManagementValues_txtValueId"
+                text="{VALUEID}"
+            />
+            <Text
+                id="ManagementValues_txtValue"
+                text="{VALUE}"
+            />
+            <Text
+                id="ManagementValues_txtAlias"
+                text="{ALIAS}"
+            />
+            <Text
+                id="ManagementValues_txtSequence"
+                text="{SEQUENCE}"
+            />
+            <Link
+                id="ManagementValues_lnkImage"
+                text="Ver Imagen"
+                href="{IMAGE}"
+                target="_blank"
+            />
+            <Text
+                id="ManagementValues_txtDescription"
+                text="{DESCRIPTION}"
+            />
+            <Text
+                id="ManagementValues_txtRegDate"
+                text="{DETAIL_ROW/DETAIL_ROW_REG/0/REGDATE}"
+            />
+            <Text
+                id="ManagementValues_txtRegUser"
+                text="{DETAIL_ROW/DETAIL_ROW_REG/0/REGUSER}"
+            />
+        </cells>
+    </ColumnListItem>
+</items>
+
+        </Table>
+        <!-- Footer con paginación -->
+        <Toolbar id="ManagementValues_tbrFooter" design="Auto" class="sapUiTinyMarginTop">
+            <Text id="ManagementValues_txtPagination" text="Mostrando 1-n de n registros" />
+            <ToolbarSpacer id="ManagementValues_footerSpacer" />
+            <Button id="ManagementValues_btnPrevPage" icon="sap-icon://nav-back" press="onPreviousPage" />
+            <Text id="ManagementValues_txtPageInfo" text="Página 1 de n" />
+            <Button id="ManagementValues_btnNextPage" icon="sap-icon://nav-forward" press="onNextPage" />
+        </Toolbar>
+
+    </VBox>
+</mvc:View>

@@ -1,83 +1,51 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
-  <Dialog id="CreateUserDialog" title="Crear Nuevo Usuario" contentWidth="500px" draggable="true" resizable="true" class="sapUiResponsivePadding">
-    <content>
-      <f:SimpleForm id="CreateUserForm" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" singleContainerFullSize="false">
-        <f:content>
-          <!-- Nombre -->
-          <Label id="CreateUser_NombreLabel" text="Nombre" required="true"/>
-          <Input 
-            id="CreateUser_NombreInput" 
-            value="{/newUser/nombre}" 
-            placeholder="Ingrese el nombre"
-            width="100%"/>
-
-          <!-- Apellido -->
-          <Label id="CreateUser_ApellidoLabel" text="Apellido" required="true"/>
-          <Input 
-            id="CreateUser_ApellidoInput" 
-            value="{/newUser/apellido}" 
-            placeholder="Ingrese el apellido"
-            width="100%"/>
-
-          <!-- Email -->
-          <Label id="CreateUser_EmailLabel" text="Email" required="true"/>
-          <Input 
-            id="CreateUser_EmailInput" 
-            type="Email" 
-            value="{/newUser/email}" 
-            placeholder="Ingrese el email"
-            width="100%"/>
-
-          <!-- Departamento -->
-          <Label id="CreateUser_DeptoLabel" text="Departamento" required="true"/>
-          <Select 
-            id="CreateUser_DeptoSelect" 
-            selectedKey="{/newUser/departamento}" 
-            width="100%">
-            <core:Item id="DeptoDefaultItem" key="" text="Seleccionar..."/>
-            <core:Item id="DeptoVentasItem" key="Ventas" text="Ventas"/>
-            <core:Item id="DeptoMarketingItem" key="Marketing" text="Marketing"/>
-            <core:Item id="DeptoRHItem" key="RH" text="Recursos Humanos"/>
-            <core:Item id="DeptoTIItem" key="TI" text="Tecnologías de Información"/>
-            <core:Item id="DeptoFinanzasItem" key="Finanzas" text="Finanzas"/>
-          </Select>
-
-          <!-- Cargo -->
-          <Label id="CreateUser_CargoLabel" text="Cargo" required="true"/>
-          <Input 
-            id="CreateUser_CargoInput" 
-            value="{/newUser/cargo}" 
-            placeholder="Ingrese el cargo"
-            width="100%"/>
-
-          <!-- Fecha de Ingreso -->
-          <Label id="CreateUser_FechaLabel" text="Fecha de Ingreso" required="true"/>
-          <DatePicker 
-            id="CreateUser_FechaPicker" 
-            value="{/newUser/fechaIngreso}" 
-            placeholder="dd/mm/aaaa"
-            width="100%" 
-            displayFormat="short"/>
-
-          <!-- Estado -->
-          <Label id="CreateUser_EstadoLabel" text="Estado" required="true"/>
-          <Select 
-            id="CreateUser_EstadoSelect" 
-            selectedKey="{/newUser/estado}" 
-            width="100%">
-            <core:Item id="EstadoActivoItem" key="Activo" text="Activo"/>
-            <core:Item id="EstadoInactivoItem" key="Inactivo" text="Inactivo"/>
-          </Select>
-        </f:content>
-      </f:SimpleForm>
-    </content>
-
-    <beginButton>
-      <Button id="CreateUser_CancelBtn" text="Cancelar" press=".onCancelCreate"/>
-    </beginButton>
-
-    <endButton>
-      <Button id="CreateUser_SaveBtn" text="Guardar" type="Emphasized" press=".onConfirmCreate"/>
-    </endButton>
-  </Dialog>
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    <Dialog id="createUserDialog" title="Crear Nuevo Usuario" class="sapUiContentPadding">
+        <f:SimpleForm id="createUserForm" editable="true" layout="ResponsiveGridLayout">
+            <f:content>
+                <Label id="labelNombre" text="Nombre" required="true"/>
+                <Input id="inputNombre" value="{newUser>/nombre}" placeholder="Ingrese nombre" required="true"/>
+                
+                <Label id="labelApellido" text="Apellido" required="true"/>
+                <Input id="inputApellido" value="{newUser>/apellido}" placeholder="Ingrese apellido" required="true"/>
+                
+                <Label id="labelEmail" text="Email" required="true"/>
+                <Input id="inputEmail" value="{newUser>/email}" placeholder="ejemplo@correo.com" type="Email" required="true"/>
+                
+                <Label id="labelDepartamento" text="Departamento" required="true"/>
+                <ComboBox id="comboDepartamento" value="{newUser>/departamento}" required="true">
+                    <items>
+                        <core:Item id="itemVentas" key="Ventas" text="Ventas"/>
+                        <core:Item id="itemMarketing" key="Marketing" text="Marketing"/>
+                        <core:Item id="itemTI" key="TI" text="TI"/>
+                        <core:Item id="itemRRHH" key="RRHH" text="Recursos Humanos"/>
+                        <core:Item id="itemFinanzas" key="Finanzas" text="Finanzas"/>
+                    </items>
+                </ComboBox>
+                
+                <Label id="labelCargo" text="Cargo" required="true"/>
+                <Input id="inputCargo" value="{newUser>/cargo}" placeholder="Ingrese cargo" required="true"/>
+                
+                <Label id="labelFechaIngreso" text="Fecha de Ingreso" required="true"/>
+                <DatePicker id="datePickerIngreso" value="{newUser>/fechaIngreso}" displayFormat="dd/MM/yyyy" required="true"/>
+                
+                <Label id="labelEstado" text="Estado"/>
+                <ComboBox id="comboEstado" value="{newUser>/estado}" selectedKey="Activo">
+                    <items>
+                        <core:Item id="itemActivo" key="Activo" text="Activo"/>
+                        <core:Item id="itemInactivo" key="Inactivo" text="Inactivo"/>
+                        <core:Item id="itemSuspendido" key="Suspendido" text="Suspendido"/>
+                    </items>
+                </ComboBox>
+            </f:content>
+        </f:SimpleForm>
+        
+        <buttons>
+            <Button id="btnCancelarCreacion" text="Cancelar" press=".onCancelCreate"/>
+            <Button id="btnConfirmarCreacion" text="Crear" type="Emphasized" press=".onConfirmCreate"/>
+        </buttons>
+    </Dialog>
 </core:FragmentDefinition>
