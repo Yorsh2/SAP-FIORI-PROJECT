@@ -1,0 +1,21 @@
+{
+  "Values": [
+    {
+      "LABELID": "L001",
+      "VALUEID": "V001",
+      "VALUE": "Ejemplo",
+      "ALIAS": "Alias1",
+      "SEQUENCE": 1,
+      "IMAGE": "https://via.placeholder.com/32",
+      "DESCRIPTION": "Texto de prueba",
+      "DETAIL_ROW": {
+        "DETAIL_ROW_REG": [
+          {
+            "REGDATE": "2024-05-10",
+            "REGUSER": "admin"
+          }
+        ]
+      }
+    }
+  ]
+}

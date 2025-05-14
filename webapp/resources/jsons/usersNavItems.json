@@ -1,0 +1,63 @@
+{
+    "selectedKey": "home",
+    "navigation": [
+        {
+            "id": "01",
+            "key": "home",
+            "title": "Inicio",
+            "icon": "sap-icon://home"
+        },
+        {
+            "id": "03",
+            "key": "login",
+            "title": "Login (Cambiar usuario)",
+            "icon": "sap-icon://user-edit"
+        },
+        {
+            "key": "security",
+            "title": "Seguridad",
+            "icon": "sap-icon://shield",
+            "subItems": [
+                {
+                    "key": "userManagement",
+                    "title": "Gestión de Usuarios",
+                    "icon": "sap-icon://employee"
+                },
+                {
+                    "key": "roleManagement",
+                    "title": "Gestión de Roles",
+                    "icon": "sap-icon://role"
+                }
+            ]
+        },
+        {
+            "key": "catalog",
+            "title": "Catálogo",
+            "icon": "sap-icon://product",
+            "subItems": [
+                {
+                    "key": "values",
+                    "title": "Valores",
+                    "icon": "sap-icon://value-help"
+                },
+                {
+                    "key": "labels",
+                    "title": "Etiquetas",
+                    "icon": "sap-icon://tag"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "key": "settings",
+            "title": "Ajustes",
+            "icon": "sap-icon://action-settings"
+        },
+        {
+            "id": "02",
+            "key": "log_out",
+            "title": "Cerrar sesión",
+            "icon": "sap-icon://system-exit"
+        }
+    ]
+}
