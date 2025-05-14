@@ -1,0 +1,188 @@
+<mvc:View
+  controllerName="com.ccnay.jagsapinv.sapfiori.controller.roles.pages.ManagementRoles"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:tl="sap.ui.table"
+  displayBlock="true"
+>
+  <VBox
+    id="managementVBox1"
+    class="sapUiContentPadding">
+
+    <!-- Toolbar con botones CRUD -->
+    <Toolbar id="crudToolbarMgmt">
+      <ToolbarSpacer id="crudToolbarSpacerMgmt"/>
+      <Button
+        id="createButtonMgmt"
+        text="Crear"
+        type="Accept"
+        icon="sap-icon://add"
+        press="onCreatePress"/>
+      <Button
+        id="editButtonMgmt"
+        text="Editar"
+        type="Emphasized"
+        icon="sap-icon://edit"
+        enabled="false"
+        press="onEditPress"/>
+      <Button
+        id="updateButtonMgmt"
+        text="Actualizar"
+        type="Default"
+        icon="sap-icon://refresh"
+        press="onUpdatePress"/>
+      <Button
+        id="deleteButtonMgmt"
+        text="Eliminar"
+        type="Reject"
+        icon="sap-icon://delete"
+        enabled="false"
+        press="onDeletePress"/>
+    </Toolbar>
+
+    <!-- Tabla de roles -->
+    <tl:Table
+      id="rolesTableMgmt"
+      rows="{/Roles}"
+      selectionMode="Single"
+      selectionBehavior="RowOnly"
+      rowSelectionChange="onTableSelectionChange"
+      alternateRowColors="true"
+      enableSelectAll="false"
+      enableColumnReordering="true"
+      busyIndicatorDelay="0">
+      
+      <tl:extension>
+        <Toolbar id="rolesTableHeaderToolbarMgmt">
+          <Title
+            id="rolesTableTitleMgmt"
+            text="Lista de Roles"
+            level="H3"/>
+        </Toolbar>
+      </tl:extension>
+
+      <tl:columns>
+        <tl:Column
+          id="colRoleIdMgmt"
+          sortProperty="ROLEID"
+          width="10rem">
+          <Label
+            id="labelRoleIdMgmt"
+            text="ID del Rol"/>
+          <tl:template>
+            <Text
+              id="txtColRoleIdMgmt"
+              text="{ROLEID}"/>
+          </tl:template>
+        </tl:Column>
+
+        <tl:Column
+          id="colRoleNameMgmt"
+          sortProperty="ROLENAME"
+          width="15rem">
+          <Label
+            id="labelRoleNameMgmt"
+            text="Nombre del Rol"/>
+          <tl:template>
+            <Text
+              id="txtColRoleNameMgmt"
+              text="{ROLENAME}"/>
+          </tl:template>
+        </tl:Column>
+
+        <tl:Column
+          id="colDescMgmt"
+          sortProperty="DESCRIPTION"
+          width="20rem">
+          <Label
+            id="labelDescMgmt"
+            text="Descripción"/>
+          <tl:template>
+            <Text
+              id="txtColDescMgmt"
+              text="{DESCRIPTION}"/>
+          </tl:template>
+        </tl:Column>
+
+        <tl:Column
+          id="colActiveMgmt"
+          sortProperty="ACTIVED"
+          width="5rem">
+          <Label
+            id="labelActiveMgmt"
+            text="Activo"/>
+          <tl:template>
+            <Text
+              id="txtColActiveMgmt"
+              text="{ACTIVED}"/>
+          </tl:template>
+        </tl:Column>
+
+        <tl:Column
+          id="colDeletedMgmt"
+          sortProperty="DELETED"
+          width="5rem">
+          <Label
+            id="labelDeletedMgmt"
+            text="Eliminado"/>
+          <tl:template>
+            <Text
+              id="txtColDeletedMgmt"
+              text="{DELETED}"/>
+          </tl:template>
+        </tl:Column>
+
+        <tl:Column
+          id="colProcessIdMgmt"
+          sortProperty="PROCESSID"
+          width="15rem">
+          <Label
+            id="labelProcessIdMgmt"
+            text="ID Proceso"/>
+          <tl:template>
+            <Text
+              id="txtColProcessIdMgmt"
+              text="{PROCESSID}"/>
+          </tl:template>
+        </tl:Column>
+
+        <tl:Column
+          id="colPrivilegeIdMgmt"
+          sortProperty="PRIVILEGEID"
+          width="15rem">
+          <Label
+            id="labelPrivilegeIdMgmt"
+            text="ID Privilegio"/>
+          <tl:template>
+            <Text
+              id="txtColPrivilegeIdMgmt"
+              text="{PRIVILEGEID}"/>
+          </tl:template>
+        </tl:Column>
+      </tl:columns>
+    </tl:Table>
+
+    <!-- Footer con paginación -->
+    <Toolbar
+      id="footerToolbarMgmt"
+      design="Auto"
+      class="sapUiTinyMarginTop">
+      <Text
+        id="paginationTextMgmt"
+        text="Mostrando 1-n de n registros"/>
+      <ToolbarSpacer id="footerSpacerMgmt"/>
+      <Button
+        id="prevPageButtonMgmt"
+        icon="sap-icon://nav-back"
+        press="onPreviousPage"/>
+      <Text
+        id="pageInfoTextMgmt"
+        text="Página 1 de n"/>
+      <Button
+        id="nextPageButtonMgmt"
+        icon="sap-icon://nav-forward"
+        press="onNextPage"/>
+    </Toolbar>
+
+  </VBox>
+</mvc:View>

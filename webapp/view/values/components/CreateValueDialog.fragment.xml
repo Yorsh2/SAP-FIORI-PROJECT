@@ -1,0 +1,43 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    <Dialog id="ManagementValues_createDialog" title="Crear Nuevo Valor" class="sapUiContentPadding">
+        <f:SimpleForm id="ManagementValues_createForm" editable="true" layout="ResponsiveGridLayout">
+            <f:content>
+                <Label id="ManagementValues_lblLabelId" text="Label ID" required="true"/>
+                <Input id="ManagementValues_inpLabelId" value="{newValue>/LABELID}" placeholder="Ingrese Label ID" required="true"/>
+                
+                <Label id="ManagementValues_lblValueId" text="Value ID" required="true"/>
+                <Input id="ManagementValues_inpValueId" value="{newValue>/VALUEID}" placeholder="Ingrese Value ID" required="true"/>
+                
+                <Label id="ManagementValues_lblValue" text="Valor" required="true"/>
+                <Input id="ManagementValues_inpValue" value="{newValue>/VALUE}" placeholder="Ingrese Valor" required="true"/>
+                
+                <Label id="ManagementValues_lblAlias" text="Alias"/>
+                <Input id="ManagementValues_inpAlias" value="{newValue>/ALIAS}" placeholder="Ingrese Alias"/>
+                
+                <Label id="ManagementValues_lblSequence" text="Secuencia"/>
+                <Input id="ManagementValues_inpSequence" value="{newValue>/SEQUENCE}" placeholder="Ingrese Secuencia" type="Number"/>
+                
+                <Label id="ManagementValues_lblImage" text="Imagen (URL)"/>
+                <Input id="ManagementValues_inpImage" value="{newValue>/IMAGE}" placeholder="Ingrese URL de Imagen" type="Url"/>
+                
+                <Label id="ManagementValues_lblDescription" text="Descripción"/>
+                <Input id="ManagementValues_inpDescription" value="{newValue>/DESCRIPTION}" placeholder="Ingrese Descripción"/>
+                
+                <Label id="ManagementValues_lblRegDate" text="Fecha Registro"/>
+                <DatePicker id="ManagementValues_dpRegDate" value="{newValue>/DETAIL_ROW/DETAIL_ROW_REG/0/REGDATE}" displayFormat="dd/MM/yyyy"/>
+                
+                <Label id="ManagementValues_lblRegUser" text="Usuario Registro"/>
+                <Input id="ManagementValues_inpRegUser" value="{newValue>/DETAIL_ROW/DETAIL_ROW_REG/0/REGUSER}" placeholder="Ingrese Usuario"/>
+            </f:content>
+        </f:SimpleForm>
+        
+        <buttons>
+            <Button id="ManagementValues_btnCancelCreate" text="Cancelar" press=".onCancelCreate"/>
+            <Button id="ManagementValues_btnConfirmCreate" text="Crear" type="Emphasized" press=".onConfirmCreate"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

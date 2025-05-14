@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog id="ManagementValues_editDialog" title="Editar Valor" draggable="true" resizable="true" contentWidth="400px">
+    <VBox id="ManagementValues_editVBox" class="sapUiSmallMargin">
+      <Input id="ManagementValues_editLabelId" value="{editValue>/LABELID}" placeholder="Label ID" />
+      <Input id="ManagementValues_editValueId" value="{editValue>/VALUEID}" placeholder="Value ID" />
+      <Input id="ManagementValues_editValue" value="{editValue>/VALUE}" placeholder="Valor" />
+      <Input id="ManagementValues_editAlias" value="{editValue>/ALIAS}" placeholder="Alias" />
+      <Input id="ManagementValues_editSequence" value="{editValue>/SEQUENCE}" placeholder="Secuencia" type="Number" />
+      <Input id="ManagementValues_editImage" value="{editValue>/IMAGE}" placeholder="Imagen (URL)" type="Url" />
+      <Input id="ManagementValues_editDescription" value="{editValue>/DESCRIPTION}" placeholder="Descripción" />
+      <DatePicker id="ManagementValues_editRegDate" value="{editValue>/DETAIL_ROW/DETAIL_ROW_REG/0/REGDATE}" placeholder="Fecha Registro" displayFormat="dd/MM/yyyy" />
+      <Input id="ManagementValues_editRegUser" value="{editValue>/DETAIL_ROW/DETAIL_ROW_REG/0/REGUSER}" placeholder="Usuario Registro" />
+    </VBox>
+    <beginButton>
+      <Button id="ManagementValues_btnSaveEdit" text="Guardar Cambios" type="Emphasized" press=".onConfirmEdit"/>
+    </beginButton>
+    <endButton>
+      <Button id="ManagementValues_btnCancelEdit" text="Cancelar" press=".onCancelEdit"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>
