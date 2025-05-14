@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog id="DeleteConfirmDialog" title="Confirmar Eliminación" draggable="true" resizable="true" type="Message">
+    <VBox id="DeleteUserVBox" class="sapUiSmallMargin">
+      <Text id="DeleteUser_ConfirmText" text="¿Estás seguro de que deseas eliminar este usuario?" />
+    </VBox>
+    <beginButton>
+      <Button id="DeleteUser_DeleteBtn" text="Eliminar" type="Reject" press=".onConfirmDelete"/>
+    </beginButton>
+    <endButton>
+      <Button id="DeleteUser_CancelBtn" text="Cancelar" press=".onCancelDelete"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>
