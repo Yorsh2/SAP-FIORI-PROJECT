@@ -23,7 +23,7 @@
 
         <tnt:sideContent>
             <core:Fragment
-                fragmentName="com.ccnay.jagsapinv.sapfiori.view.users.components.SideNavigation"
+                fragmentName="com.ccnay.jagsapinv.sapfiori.view.components.SideNavigation"
                 type="XML"
             />
         </tnt:sideContent>
