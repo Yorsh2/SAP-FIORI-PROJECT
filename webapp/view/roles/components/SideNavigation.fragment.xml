@@ -1,0 +1,17 @@
+<SideNavigation
+    id="IdSideNavigation1Roles"
+    xmlns="sap.tnt"
+    expanded="true"
+    selectedKey="{rolesNavModel>/selectedKey}"
+    itemSelect="onItemSelect"
+>
+    <NavigationList id="IdNavigationList1Roles" items="{path: 'rolesNavModel>/navigation'}">
+        <NavigationListItem
+            id="IdNavigationListItem1Roles"
+            text="{rolesNavModel>title}"
+            icon="{rolesNavModel>icon}"
+            key="{rolesNavModel>key}"
+            select="onNavItemSelect"
+        />
+    </NavigationList>
+</SideNavigation>

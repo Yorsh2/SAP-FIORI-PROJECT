@@ -1,0 +1,93 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    <Dialog
+        id="CreateRoleDialog"
+        title="Crear Nuevo Rol"
+        class="sapUiContentPadding">
+        
+        <f:SimpleForm
+            id="CreateRoleForm"
+            editable="true"
+            layout="ResponsiveGridLayout">
+            
+            <f:content>
+                <Label
+                    id="CreateRoleDialog_lblRoleID"
+                    text="Role ID"
+                    required="true"/>
+                <Input
+                    id="CreateRoleDialog_inpRoleID"
+                    value="{newRole>/ROLEID}"
+                    placeholder="Ingrese ROLEID"
+                    required="true"/>
+                
+                <Label
+                    id="CreateRoleDialog_lblRoleName"
+                    text="Role Name"
+                    required="true"/>
+                <Input
+                    id="CreateRoleDialog_inpRoleName"
+                    value="{newRole>/ROLENAME}"
+                    placeholder="Ingrese ROLENAME"
+                    required="true"/>
+                
+                <Label
+                    id="CreateRoleDialog_lblDescription"
+                    text="Descripción"/>
+                <Input
+                    id="CreateRoleDialog_inpDescription"
+                    value="{newRole>/DESCRIPTION}"
+                    placeholder="Ingrese DESCRIPTION"/>
+                
+                <Label
+                    id="CreateRoleDialog_lblActived"
+                    text="Activo"/>
+                <Switch
+                    id="CreateRoleDialog_swtActived"
+                    state="{newRole>/ACTIVED}"
+                    customTextOn="Sí"
+                    customTextOff="No"/>
+                
+                <Label
+                    id="CreateRoleDialog_lblDeleted"
+                    text="Eliminado"/>
+                <Switch
+                    id="CreateRoleDialog_swtDeleted"
+                    state="{newRole>/DELETED}"
+                    customTextOn="Sí"
+                    customTextOff="No"/>
+                
+                <Label
+                    id="CreateRoleDialog_lblProcessID"
+                    text="Process ID"/>
+                <Input
+                    id="CreateRoleDialog_inpProcessID"
+                    value="{newRole>/PROCESSID}"
+                    placeholder="Ingrese PROCESSID"/>
+                
+                <Label
+                    id="CreateRoleDialog_lblPrivilegeID"
+                    text="Privilege ID"/>
+                <Input
+                    id="CreateRoleDialog_inpPrivilegeID"
+                    value="{newRole>/PRIVILEGEID}"
+                    placeholder="Ingrese PRIVILEGEID"/>
+            </f:content>
+        </f:SimpleForm>
+        
+        <buttons>
+            <Button
+                id="CreateRoleDialog_btnCancel"
+                text="Cancelar"
+                press=".onCancelCreate"/>
+            <Button
+                id="CreateRoleDialog_btnCreate"
+                text="Crear"
+                type="Emphasized"
+                press=".onConfirmCreate"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

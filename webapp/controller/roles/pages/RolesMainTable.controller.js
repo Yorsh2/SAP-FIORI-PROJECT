@@ -9,10 +9,10 @@ sap.ui.define([
 ], function (BaseController, JSONModel, Storage, BusyIndicator, MessageToast) {
     "use strict";
 
-    return BaseController.extend("com.ccnay.jagsapinv.sapfiori.controller.users.pages.UsersMainTable", {
+    return BaseController.extend("com.ccnay.jagsapinv.sapfiori.controller.roles.pages.RolesMainTable", {
         onInit: function () {
             let oRouter = this.getRouter();
-            oRouter.getRoute("RouteUsers").attachPatternMatched(this._onRouteMatched, this);
+            oRouter.getRoute("Routeroles").attachPatternMatched(this._onRouteMatched, this);
         },
 
         _onRouteMatched: async function (oEvent) {
@@ -20,12 +20,12 @@ sap.ui.define([
             BusyIndicator.show(0);
 
             // Obtener la referencia a la tabla en la vista
-            const oTable = this.byId("IdTable1UsersMainTable");
+            const oTable = this.byId("IdTable1RolesMainTable");
             // Crear un modelo JSON vacío
             const oModel = new JSONModel();
 
             // Cargar datos desde el archivo local ubicado en "resources/jsons/users.json"
-            oModel.loadData('./resources/jsons/users.json'); //Esta es la parte donde obtinen los datos estaticos del json
+            oModel.loadData('./resources/jsons/roles.json'); //Esta es la parte donde obtinen los datos estaticos del json
 
             // Cuando la carga se complete exitosamente, se asigna el modelo a la tabla
             oModel.attachRequestCompleted((oEvent) => {

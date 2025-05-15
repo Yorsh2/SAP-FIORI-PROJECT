@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
   <Dialog id="ManagementValues_updateDialog" title="Actualizar Valor" draggable="true" resizable="true" contentWidth="400px">
     <VBox id="ManagementValues_updateVBox" class="sapUiSmallMargin">
@@ -11,3 +12,18 @@
     </endButton>
   </Dialog>
 </core:FragmentDefinition>
+=======
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog id="ManagementValues_updateDialog" title="Actualizar Valor" draggable="true" resizable="true" contentWidth="400px">
+    <VBox id="ManagementValues_updateVBox" class="sapUiSmallMargin">
+      <Text id="ManagementValues_updateInfoText" text="Esta acción actualizará los datos del valor seleccionado." />
+    </VBox>
+    <beginButton>
+      <Button id="ManagementValues_btnConfirmUpdate" text="Actualizar" type="Emphasized" press=".onConfirmUpdate"/>
+    </beginButton>
+    <endButton>
+      <Button id="ManagementValues_btnCancelUpdate" text="Cancelar" press=".onCancelUpdate"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>
+>>>>>>> bbc41e52aebfceb6a2f20353299478a3208d4121

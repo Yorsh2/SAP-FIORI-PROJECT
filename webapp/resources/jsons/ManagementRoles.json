@@ -1,0 +1,13 @@
+{
+  "Roles": [
+    {
+      "ROLEID": "R001",
+      "ROLENAME": "Administrador",
+      "DESCRIPTION": "Acceso completo al sistema",
+      "ACTIVED": true,
+      "DELETED": false,
+      "PROCESSID": "P001",
+      "PRIVILEGEID": "PRIV01"
+    }
+  ]
+}

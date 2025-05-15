@@ -66,8 +66,8 @@ sap.ui.define([
               sViewName = "com.ccnay.jagsapinv.sapfiori.view.values.pages.ManagementValues";
               break;
             case "roleManagement":
-              MessageBox.information("Funcionalidad de gestión de roles en desarrollo");
-              return;
+              sViewName = "com.ccnay.jagsapinv.sapfiori.view.roles.pages.ManagementRoles";
+              break;
             case "settings":
               MessageBox.information("Funcionalidad de ajustes en desarrollo");
               return;

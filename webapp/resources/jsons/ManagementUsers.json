@@ -1,0 +1,24 @@
+{
+    "Users": [
+        {
+            "id": "1",
+            "nombre": "Juan",
+            "apellido": "Pérez",
+            "email": "juan.perez@ejemplo.com",
+            "departamento": "Ventas",
+            "cargo": "Vendedor",
+            "fechaIngreso": "2021-01-01",
+            "estado": "Activo"
+        },
+        {
+            "id": "2",
+            "nombre": "Maria",
+            "apellido": "Lopez",
+            "email": "maria.lopez@ejemplo.com",
+            "departamento": "TI",
+            "cargo": "Desarrolladora",
+            "fechaIngreso": "2021-05-15",
+            "estado": "Activo"
+        }
+    ]
+}

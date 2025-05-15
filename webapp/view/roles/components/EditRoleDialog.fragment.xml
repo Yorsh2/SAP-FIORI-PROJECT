@@ -1,0 +1,106 @@
+<!-- webapp/view/roles/components/EditRoleDialog.fragment.xml -->
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:f="sap.ui.layout.form">
+
+  <Dialog
+    id="EditRoleDialog"
+    title="Editar Rol"
+    draggable="true"
+    resizable="true"
+    class="sapUiContentPadding">
+
+    <f:SimpleForm
+      id="EditRoleForm"
+      editable="true"
+      layout="ResponsiveGridLayout">
+
+      <f:content>
+        <!-- Role ID -->
+        <Label
+          id="EditRoleForm_lblRoleID"
+          text="Role ID"
+          required="true"/>
+        <Input
+          id="EditRoleForm_inpRoleID"
+          value="{editRole>/ROLEID}"
+          placeholder="Ingrese ROLEID"
+          required="true"/>
+
+        <!-- Role Name -->
+        <Label
+          id="EditRoleForm_lblRoleName"
+          text="Role Name"
+          required="true"/>
+        <Input
+          id="EditRoleForm_inpRoleName"
+          value="{editRole>/ROLENAME}"
+          placeholder="Ingrese ROLENAME"
+          required="true"/>
+
+        <!-- Descripción -->
+        <Label
+          id="EditRoleForm_lblDescription"
+          text="Descripción"/>
+        <Input
+          id="EditRoleForm_inpDescription"
+          value="{editRole>/DESCRIPTION}"
+          placeholder="Ingrese DESCRIPTION"/>
+
+        <!-- Activo -->
+        <Label
+          id="EditRoleForm_lblActived"
+          text="Activo"/>
+        <Switch
+          id="EditRoleForm_swtActived"
+          state="{editRole>/ACTIVED}"
+          customTextOn="Sí"
+          customTextOff="No"/>
+
+        <!-- Eliminado -->
+        <Label
+          id="EditRoleForm_lblDeleted"
+          text="Eliminado"/>
+        <Switch
+          id="EditRoleForm_swtDeleted"
+          state="{editRole>/DELETED}"
+          customTextOn="Sí"
+          customTextOff="No"/>
+
+        <!-- Process ID -->
+        <Label
+          id="EditRoleForm_lblProcessID"
+          text="Process ID"/>
+        <Input
+          id="EditRoleForm_inpProcessID"
+          value="{editRole>/PROCESSID}"
+          placeholder="Ingrese PROCESSID"/>
+
+        <!-- Privilege ID -->
+        <Label
+          id="EditRoleForm_lblPrivilegeID"
+          text="Privilege ID"/>
+        <Input
+          id="EditRoleForm_inpPrivilegeID"
+          value="{editRole>/PRIVILEGEID}"
+          placeholder="Ingrese PRIVILEGEID"/>
+      </f:content>
+    </f:SimpleForm>
+
+    <beginButton>
+      <Button
+        id="EditRoleDialog_btnCancel"
+        text="Cancelar"
+        press=".onCancelEdit"/>
+    </beginButton>
+
+    <endButton>
+      <Button
+        id="EditRoleDialog_btnConfirm"
+        text="Guardar"
+        type="Emphasized"
+        press=".onConfirmEdit"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>
