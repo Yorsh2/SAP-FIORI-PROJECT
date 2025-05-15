@@ -230,7 +230,7 @@ sap.ui.define([
 
     });
 });
-=======
+
 sap.ui.define([
     "com/ccnay/jagsapinv/sapfiori/controller/BaseController",
     "sap/ui/model/json/JSONModel",
